@@ -1,4 +1,4 @@
-package MaxIn2Arrray;
+package MaxIn2Array;
 
 import java.util.Scanner;
 
