@@ -36,19 +36,17 @@ public class AddElement {
 
             int[] newArray;
             newArray = new int[size+1];
-            for (i = array.length; i > 0; i--){
+            for (i = 0; i < index_add; i++){
                 newArray[i] = array[i];
-                if (i == index_add){
-                    newArray[i] = element_add;
-                    break;
-                }
+            }
+            newArray[index_add] = element_add;
+            for (int j = index_add+1; j < size+1; j++){
+                newArray[j] = array[j-1];
             }
 
-            size = i;
-
             System.out.println("Array after deleting the element " + "" + " là: ");
-            for (i = 0; i < size; i++){
-                System.out.println(newArray[i] + "\t");
+            for (int j = 0; j < size+1; j++){
+                System.out.println(newArray[j] + "\t");
             }
         }
     }
