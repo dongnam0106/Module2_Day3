@@ -22,11 +22,11 @@ public class CombineArray {
         }
 
         System.out.println("Elements in array: ");
-        for (int j = 0; j < array1.length; j++){
+        for (int j = 0; j < array1.length; j++) {
             System.out.println(array1[j] + "\t");
         }
 
-        i=0;
+        i = 0;
         System.out.println("Input array2: ");
         array2 = new int[size2];
         while (i < array2.length) {
@@ -36,23 +36,32 @@ public class CombineArray {
         }
 
         System.out.println("Elements in array: ");
-        for (int j = 0; j < array2.length; j++){
+        for (int j = 0; j < array2.length; j++) {
             System.out.println(array2[j] + "\t");
         }
 
-        int z=0;
+        int z = 0;
+        int j = 0;
         array3 = new int[size3];
-        while ( z < array1.length){
-            array3[z]= array1[z];
+        while (z < size3) {
+            if(z < array1.length){
+                array3[z] = array1[z];
+            }else {
+                array3[z] = array2[j];
+                j++;
+            }
             z++;
         }
-//            for (int j = i; j < i; j++){
-//                array3[size3-i-1]= array2[j];
+//        for (int j = z + 1; j < size3; j++) {
+//            for (int k = 0; k < size2; k++) {
+//                array3[j] = array2[k];
+//
 //            }
+//        }
 
         System.out.println("Elements in array: ");
-        for (int j = 0; j < array1.length; j++){
-            System.out.println(array3[j] + "\t");
+        for (int k = 0; k < size3; k++) {
+            System.out.println(array3[k] + "\t");
         }
     }
 }
